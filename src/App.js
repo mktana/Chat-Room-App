@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect } from 'react';
+//import * as Ably from 'ably';
+// import { AblyProvider, useChannel, useConnectionStateListener } from 'ably/react';
+import ChatRoomForm from './components/ChatRoomForm';
+// import AblyPubSub from './components/AblyPubSub'
+
+// const client = new Ably.Realtime.Promise(process.env.ABLY_API );
 
 function App() {
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Welcom To Chat Room</h1>
       </header>
+      <ChatRoomForm />
+      {/* <AblyProvider client={client}>
+      <AblyPubSub />
+    </AblyProvider> */}
     </div>
   );
 }
