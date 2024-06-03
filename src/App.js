@@ -1,23 +1,24 @@
-import { useEffect } from 'react';
+//import { useEffect } from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 //import * as Ably from 'ably';
-// import { AblyProvider, useChannel, useConnectionStateListener } from 'ably/react';
+//import { AblyProvider } from 'ably/react';
 import ChatRoomForm from './components/ChatRoomForm';
-// import AblyPubSub from './components/AblyPubSub'
+import Header from './components/Header';
+//import AblyPubSub from './components/AblyPubSub'
 
-// const client = new Ably.Realtime.Promise(process.env.ABLY_API );
+//const client = new Ably.Realtime.Promise(process.env.ABLY_API );
 
 function App() {
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Welcom To Chat Room</h1>
-      </header>
-      <ChatRoomForm />
+    <Router>
+    <Header />
       {/* <AblyProvider client={client}>
       <AblyPubSub />
     </AblyProvider> */}
-    </div>
+      <ChatRoomForm />
+    
+    </Router>
   );
 }
 
